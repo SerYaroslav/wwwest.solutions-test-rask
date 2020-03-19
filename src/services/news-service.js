@@ -10,3 +10,6 @@ export default class NewsService {
   }
 }
 
+const test = new NewsService();
+
+test.getLiveTop().then(res => console.log(res.articles));
