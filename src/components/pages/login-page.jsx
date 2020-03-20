@@ -5,7 +5,7 @@ const LoginPage = () => {
     <form>
       <div className="col-sm-3 mx-auto mt-5">
         <div className="form-group">
-          <label for="login-input">Login</label>
+          <label htmlFor="login-input">Login</label>
           <input
             type="text"
             className="form-control"
@@ -17,7 +17,7 @@ const LoginPage = () => {
           </small>
         </div>
         <div className="form-group">
-          <label for="password-input">Password</label>
+          <label htmlFor="password-input">Password</label>
           <input
             type="password"
             className="form-control"

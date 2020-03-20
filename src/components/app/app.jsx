@@ -1,16 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import { fetchNews } from '../../actions';
+import { withNewsService } from '../hoc';
 
 import Header from '../header';
-import {LoginPage} from '../pages';
+import {LoginPage, HomePage, NewsPage} from '../pages';
+
 import './app.css';
 
-const App = () => {
+const App = ({ fetchNews }) => {
+  useEffect(() => fetchNews());
+
   return (
     <React.Fragment>
       <Header />
-      <LoginPage/>
+      <Switch>
+        <Route path="/" component={HomePage} exact />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/news" component={NewsPage} />
+      </Switch>
     </React.Fragment>
   );
+};
+
+const mapDispatchToProps = (dispatch, { newsService }) => {
+
+  return {
+    fetchNews: fetchNews(newsService, dispatch),
+  }
 }
 
-export default App;
+export default withNewsService()(connect(null, mapDispatchToProps)(App));

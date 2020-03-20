@@ -12,17 +12,17 @@ const Header = () => {
       <div className="collapse navbar-collapse flex-grow-0" id="navbarColor01">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <Link className="nav-link" to="/login/">
+            <Link className="nav-link" to="/login">
               Login
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/news/">
+            <Link className="nav-link" to="/news">
               News
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/profile/">
+            <Link className="nav-link" to="/profile">
               Profile
             </Link>
           </li>
