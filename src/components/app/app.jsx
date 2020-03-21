@@ -6,7 +6,7 @@ import { fetchNews } from '../../actions';
 import { withNewsService } from '../hoc';
 
 import Header from '../header';
-import {LoginPage, HomePage, NewsPage} from '../pages';
+import { LoginPage, HomePage, NewsPage, ProfilePage } from "../pages";
 
 import './app.css';
 
@@ -20,6 +20,7 @@ const App = ({ fetchNews }) => {
         <Route path="/" component={HomePage} exact />
         <Route path="/login" component={LoginPage} />
         <Route path="/news" component={NewsPage} />
+        <Route path="/profile" component={ProfilePage} />
       </Switch>
     </React.Fragment>
   );
