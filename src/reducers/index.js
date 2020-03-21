@@ -1,4 +1,4 @@
-import users from '../services/users';
+import users from '../services/localStorage';
 
 const initialState = {
   newsLoading: true,
@@ -49,8 +49,9 @@ const reducer = (state = initialState, action) => {
           ...state,
           user: {
             ...users[idx],
-            authorized: true,
+            authorized: true
           },
+          loginError: false,
         };
       }
 

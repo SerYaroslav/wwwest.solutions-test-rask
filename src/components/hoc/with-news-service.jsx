@@ -1,5 +1,5 @@
-import React from "react";
-import { NewsServiceConsumer } from "../news-service-contex";
+import React from 'react';
+import { NewsServiceConsumer } from '../news-service-contex';
 
 const withNewsService = () => Wrapped => {
   return props => {

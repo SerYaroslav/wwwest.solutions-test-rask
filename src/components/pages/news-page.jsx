@@ -1,10 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-const NewsPage = ({ news, loading }) => {
-  if (loading) {
+const NewsPage = ({ news, newsLoading }) => {
+  if (newsLoading) {
     return <h3>Loading...</h3>;
   }
+  console.log(news);
 
   return (
     <div className="container-lg d-flex flex-wrap">
@@ -32,7 +33,7 @@ const NewsPage = ({ news, loading }) => {
 const mapStateToProps = ({ news, newsLoading }) => {
   return {
     news,
-    loading: newsLoading,
+    newsLoading
   };
 };
 

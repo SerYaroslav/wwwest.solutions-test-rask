@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
-import { setUserData } from "../../actions";
+import { setUserData } from '../../actions';
 import { Redirect } from 'react-router-dom';
 
 const LoginPage = ({ setUserData, userLogout, authorized, loginError }) => {

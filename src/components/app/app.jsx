@@ -6,9 +6,7 @@ import { fetchNews } from '../../actions';
 import { withNewsService } from '../hoc';
 
 import Header from '../header';
-import { LoginPage, HomePage, NewsPage, ProfilePage } from "../pages";
-
-import './app.css';
+import { LoginPage, HomePage, NewsPage, ProfilePage } from '../pages';
 
 const App = ({ fetchNews }) => {
   useEffect(() => fetchNews());
